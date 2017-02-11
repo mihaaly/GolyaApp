@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GolyaApp</string>
+    <string name="sign">Gólya Presszó</string>
+    <string name="motto">A Gólya egy presszó és közösségi ház Budapest VIII. kerületében.</string>
+    <string name="address">Bókay János u. 30-34 Budapest, 1083</string>
+    <string name="monday">Hétfő</string>
+    <string name="monday_hours_string">11:30-23:45</string>
+    <string name="tuesday">Kedd</string>
+    <string name="tuesday_hours_string">11:30-23:45</string>
+    <string name="wednesday">Szerda</string>
+    <string name="wednesday_hours_string">11:30-23:45</string>
+    <string name="thursday">Csütörtök</string>
+    <string name="thursday_hours_string">11:30-02:00</string>
+    <string name="friday">Péntek</string>
+    <string name="friday_hours_string">11:30-04:00</string>
+    <string name="saturday">Szombat</string>
+    <string name="saturday_hours_string">18:00-04:00</string>
+    <string name="sunday">Vasárnap</string>
+    <string name="sunday_hours_string">18:00-23:00</string>
+    <string name="telnumber_string">06 (1) 785 5568</string>
+
+
+</resources>

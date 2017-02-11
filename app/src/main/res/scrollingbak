@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="golyapresszo.hu.golyaapp.MainActivity"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+
+    <ImageView
+        style="@style/style_matte_yellowGolya"
+        android:layout_weight="0.5" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner" />
+
+    <ImageView
+        style="@style/style_matte_yellowGolya"
+        android:layout_weight="0.5" />
+
+
+    <LinearLayout
+        style="@style/style_matte_yellowGolya.Black"
+        android:layout_weight="6"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/nav_button"
+            style="@style/style_menuItem"
+            android:src="@drawable/nav_button"
+            android:background="@color/blackGolya"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/sign_view"
+            style="@style/style_menuItem"
+            android:layout_toLeftOf="@+id/menu_button"
+            android:layout_alignBaseline="@id/menu_button"
+            android:paddingRight="@dimen/breach8"
+            android:paddingLeft="8dp"
+            android:text="@string/sign"/>
+
+
+
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            style="@style/style_menuItem"
+            android:src="@drawable/menu_button"
+            android:background="@color/blackGolya"/>
+
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="50">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_pic"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.6"
+                android:src="@drawable/emberek"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/view_motto"
+                android:layout_height="0dp"
+                android:layout_width="match_parent"
+                android:layout_weight="0.12"
+                style="@style/style_motto"
+                android:text="@string/motto"
+                android:gravity="center_vertical" />
+
+            <LinearLayout
+                android:id="@+id/info_views"
+                style="@style/style_matte_yellowGolya"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/location_view"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/info_item_views"
+                    android:gravity="center_vertical">
+
+                    <ImageButton
+                        android:id="@+id/location_button"
+                        style="@style/info_item_buttons"
+                        android:src="@drawable/location_ico_golya_black" />
+                    <TableLayout
+                        android:id="@+id/location_table_view"
+                        style="@style/table"
+                    >
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/location_text"
+                                style="@style/info_item_text.2"
+                                android:text="@string/address"/>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/hours_view"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    style="@style/info_item_views"
+                    android:gravity="">
+                    <ImageButton
+                        android:id="@+id/hours_button"
+                        style="@style/info_item_buttons"
+                        android:src="@drawable/hours_ico_golya_black"
+                        android:layout_gravity="start"/>
+                    <TableLayout
+                        android:id="@+id/hours_table_view"
+                        style="@style/table"
+                        android:stretchColumns="2"
+                        android:shrinkColumns="2">
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/monday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/monday"/>
+
+                            <TextView
+                                android:id="@+id/monday_hours"
+                                style="@style/info_item_text"
+                                android:text="@string/monday_hours_string"/>
+                        </TableRow>
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/tuesday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/tuesday"/>
+                            <TextView
+                                android:id="@+id/tuesday_hours_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/tuesday_hours_string"/>
+                        </TableRow>
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/wednesday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/wednesday"/>
+                            <TextView
+                                android:id="@+id/wednesday_hours_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/wednesday_hours_string"/>
+                        </TableRow>
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/thursday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/thursday"/>
+                            <TextView
+                                android:id="@+id/thursday_hours_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/thursday_hours_string"/>
+                        </TableRow>
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/friday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/friday"/>
+                            <TextView
+                                android:id="@+id/friday_hours_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/friday_hours_string"/>
+                        </TableRow>
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/saturday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/saturday"/>
+                            <TextView
+                                android:id="@+id/saturday_hours_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/saturday_hours_string" />
+                        </TableRow>
+                        <TableRow>
+
+                            <TextView
+                                android:id="@+id/sunday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/sunday"/>
+                            <TextView
+                                android:id="@+id/sunday_cell"
+                                style="@style/info_item_text"
+                                android:text="@string/sunday_hours_string" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/telnumber_view"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    style="@style/info_item_views"
+                    android:gravity="center_vertical">
+                    <ImageButton
+                        android:id="@+id/telnumber_button"
+                        style="@style/info_item_buttons"
+                        android:src="@drawable/tel_ico_golya_black" />
+                    <TableLayout
+                        android:id="@+id/telnumber_table_view"
+                        style="@style/table"
+                        android:stretchColumns="*"
+                        android:shrinkColumns="*"
+                        android:gravity="center_vertical">
+                        <TableRow>
+                            <TextView
+                                android:id="@+id/telnumber_text"
+                                style="@style/info_item_text"
+                                android:text="@string/telnumber_string"/>
+                        </TableRow>
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        style="@style/style_matte_yellowGolya.Black"
+        android:layout_weight="6"/>
+
+</LinearLayout>
