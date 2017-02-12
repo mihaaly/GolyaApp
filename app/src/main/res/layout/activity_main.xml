@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,215 +9,37 @@
     android:orientation="vertical"
     android:background="@color/yellowGolya">
 
-    <!-- check out weightSum attribute -->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.5"
-        android:scaleType="centerCrop"
-        android:src="@drawable/banner2"
-        android:id="@+id/imageView" />
-
-    <LinearLayout
-        style="@style/black_view_style"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/sign_view"
-            android:text="@string/sign"
-            style="@style/sign_style" />
-        <View
-            android:layout_width="1dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
-        <ImageButton
-            android:id="@+id/nav_button"
-            style="@style/button_style"
-            android:src="@drawable/nav_button" />
-    </LinearLayout>
-
-
 
     <ImageView
-        android:id="@+id/main_pic"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
+        android:id="@+id/imageViewBanner"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/emberek" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner2"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
-            android:id="@+id/view_motto"
-            style="@style/black_view_style.motto"
-            android:text="@string/motto"
-            android:gravity="center_vertical" />
-    <!-- check out drawbleLeft, drawablePadding attribute for textview -->
-    <LinearLayout
-        android:id="@+id/info_views"
-        style="@style/yellow_view_style"
-        android:layout_weight="4"
-        android:orientation="vertical"
-        android:gravity="center_vertical">
-        <LinearLayout
-            android:id="@+id/location_view"
-            style="@style/info_item_views"
-            android:gravity="center_vertical"
-            >
+        android:id="@+id/textViewSign"
+        style="@style/sign_style"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="0.5"
+        android:text="@string/sign"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBanner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonMenu" />
 
-            <ImageButton
-                android:id="@+id/location_button"
-                style="@style/info_item_buttons"
-                android:src="@drawable/location_ico_golya_black" />
-            <TableLayout
-                android:id="@+id/location_table_view"
-                style="@style/table">
-                <TableRow>
-                    <TextView
-                        android:id="@+id/location_text"
-                        style="@style/info_item_text.2"
-                        android:text="@string/address"/>
-                </TableRow>
-            </TableLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/hours_view"
-            style="@style/info_item_views"
-            >
-            <ImageButton
-                android:id="@+id/hours_button"
-                style="@style/info_item_buttons"
-                android:src="@drawable/hours_ico_golya_black"
-                android:layout_gravity="start"/>
-            <TableLayout
-                android:id="@+id/hours_table_view"
-                style="@style/table"
-                android:stretchColumns="1"
-                android:shrinkColumns="1">
-                <TableRow>
-                    <TextView
-                        android:id="@+id/monday_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/monday"/>
+    <ImageButton
+        android:id="@+id/imageButtonMenu"
+        style="@style/menu_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/golya_nav_ico"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBanner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textViewSign"
+         />
 
-                    <TextView
-                        android:id="@+id/monday_hours_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/monday_hours_string"/>
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/tuesday_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/tuesday"/>
-                    <TextView
-                        android:id="@+id/tuesday_hours_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/tuesday_hours_string"/>
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/wednesday_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/wednesday"/>
-                    <TextView
-                        android:id="@+id/wednesday_hours_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/wednesday_hours_string"/>
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/thursday_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/thursday"/>
-                    <TextView
-                        android:id="@+id/thursday_hours_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/thursday_hours_string"/>
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/friday_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/friday"/>
-                    <TextView
-                        android:id="@+id/friday_hours_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/friday_hours_string"/>
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/saturday_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/saturday"/>
-                    <TextView
-                        android:id="@+id/saturday_hours_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/saturday_hours_string" />
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/sunday_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/sunday"/>
-                    <TextView
-                        android:id="@+id/sunday_hours_cell"
-                        style="@style/info_item_text"
-                        android:text="@string/sunday_hours_string" />
-                </TableRow>
-            </TableLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/telnumber_view"
-            style="@style/info_item_views"
-            android:gravity="center_vertical"
-            >
-            <ImageButton
-                android:id="@+id/telnumber_button"
-                style="@style/info_item_buttons"
-                android:src="@drawable/tel_ico_golya_black" />
-            <TableLayout
-                android:id="@+id/telnumber_table_view"
-                style="@style/table"
-                android:gravity="center_vertical">
-                <TableRow>
-
-                    <TextView
-                        android:id="@+id/telnumber_text"
-                        style="@style/info_item_text"
-                        android:text="@string/telnumber_string"/>
-                </TableRow>
-            </TableLayout>
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        style="@style/black_view_style"
-        android:orientation="horizontal">
-        <View
-            android:layout_width="1dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"/>
-
-        <ImageButton
-            android:id="@+id/http_button_view"
-            style="@style/button_style"
-            android:src="@drawable/http_button"/>
-
-        <ImageButton
-            android:id="@+id/mail_button_view"
-            style="@style/button_style"
-            android:src="@drawable/email_button"/>
-        <ImageButton
-            android:id="@+id/facebook_button_view"
-            style="@style/button_style"
-            android:src="@drawable/facebook_button"/>
-    </LinearLayout>
-
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

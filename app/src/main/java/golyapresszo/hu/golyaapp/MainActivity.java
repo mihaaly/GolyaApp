@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         String fontPathQuicksandMedium="fonts/Quicksand-Medium.ttf";
         String fontPathQuicksandRegular="fonts/Quicksand-Regular.ttf";
         // Get the customFont TextView
-        TextView textView1 = (TextView) findViewById(R.id.sign_view);
+        TextView textView1 = (TextView) findViewById(R.id.textViewSign);
         TextView textView2 = (TextView) findViewById(R.id.view_motto);
         TextView textView3 = (TextView) findViewById(R.id.location_text);
         TextView textView4 = (TextView) findViewById(R.id.monday_cell);
