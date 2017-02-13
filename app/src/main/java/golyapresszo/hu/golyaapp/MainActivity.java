@@ -1,9 +1,8 @@
 package golyapresszo.hu.golyaapp;
 
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.LinearLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,22 +17,23 @@ public class MainActivity extends AppCompatActivity {
         String fontPathQuicksandRegular="fonts/Quicksand-Regular.ttf";
         // Get the customFont TextView
         TextView textView1 = (TextView) findViewById(R.id.textViewSign);
-        TextView textView2 = (TextView) findViewById(R.id.view_motto);
-        TextView textView3 = (TextView) findViewById(R.id.location_text);
-        TextView textView4 = (TextView) findViewById(R.id.monday_cell);
-        TextView textView5 = (TextView) findViewById(R.id.monday_hours_cell);
-        TextView textView6 = (TextView) findViewById(R.id.tuesday_cell);
-        TextView textView7 = (TextView) findViewById(R.id.tuesday_hours_cell);
-        TextView textView8 = (TextView) findViewById(R.id.wednesday_cell);
-        TextView textView9 = (TextView) findViewById(R.id.wednesday_hours_cell);
-        TextView textView10 = (TextView) findViewById(R.id.thursday_cell);
-        TextView textView11 = (TextView) findViewById(R.id.thursday_hours_cell);
-        TextView textView12 = (TextView) findViewById(R.id.friday_cell);
-        TextView textView13 = (TextView) findViewById(R.id.friday_hours_cell);
-        TextView textView14 = (TextView) findViewById(R.id.saturday_cell);
-        TextView textView15 = (TextView) findViewById(R.id.saturday_hours_cell);
-        TextView textView16 = (TextView) findViewById(R.id.sunday_cell);
-        TextView textView17 = (TextView) findViewById(R.id.sunday_hours_cell);
+        TextView textView2 = (TextView) findViewById(R.id.textViewMotto);
+        TextView textView3 = (TextView) findViewById(R.id.textViewLocationText);
+        TextView textView4 = (TextView) findViewById(R.id.textViewMonday);
+        TextView textView5 = (TextView) findViewById(R.id.textViewMondayHours);
+        TextView textView6 = (TextView) findViewById(R.id.textViewTuesday);
+        TextView textView7 = (TextView) findViewById(R.id.textViewTuesdayHours);
+        TextView textView8 = (TextView) findViewById(R.id.textViewWednesday);
+        TextView textView9 = (TextView) findViewById(R.id.textViewWednesdayHours);
+        TextView textView10 = (TextView) findViewById(R.id.textViewThursday);
+        TextView textView11 = (TextView) findViewById(R.id.textViewThursdayHours);
+        TextView textView12 = (TextView) findViewById(R.id.textViewFriday);
+        TextView textView13 = (TextView) findViewById(R.id.textViewFridayHours);
+        TextView textView14 = (TextView) findViewById(R.id.textViewSaturday);
+        TextView textView15 = (TextView) findViewById(R.id.textViewSaturdayHours);
+        TextView textView16 = (TextView) findViewById(R.id.textViewSunday);
+        TextView textView17 = (TextView) findViewById(R.id.textViewSundayHours);
+        TextView textView18 = (TextView) findViewById(R.id.textViewPhonenumber);
 
         // Load the font as a TypeFace object
         Typeface sacramentoRegular= Typeface.createFromAsset(getAssets(), fontPathSacramentoRegular);

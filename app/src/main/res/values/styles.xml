@@ -23,23 +23,29 @@
         <item name="android:textSize">@dimen/display1</item>
         <item name="android:background">@color/blackGolya</item>
         <item name="android:paddingLeft">@dimen/keyline1</item>
-        <item name="android:paddingTop">@dimen/breach8</item>
+
 
     </style>
 
     <style name="menu_button_style">
         <item name="android:background">@color/blackGolya</item>
         <item name="android:paddingLeft">@dimen/breach8</item>
-        <item name="android:paddingTop">@dimen/breach8</item>
+        <item name="android:paddingTop">@dimen/breach4</item>
         <item name="android:paddingRight">@dimen/keyline1</item>
-        <item name="android:paddingBottom">@dimen/breach8</item>
     </style>
 
-   <style name="black_view_style.motto">
+    <style name="menu_button_style.bottom">
+        <item name="android:paddingBottom">@dimen/keyline1</item>
+    </style>
+
+   <style name="motto">
        <item name="android:textColor">@color/whiteGolya</item>
        <item name="android:textSize">@dimen/body</item>
-       <item name="android:paddingTop">@dimen/breach8</item>
-       <item name="android:paddingBottom">@dimen/breach8</item>
+       <item name="android:paddingTop">@dimen/breach4</item>
+       <item name="android:paddingLeft">@dimen/keyline1</item>
+       <item name="android:paddingRight">@dimen/keyline1</item>
+       <item name="android:paddingBottom">@dimen/breach4</item>
+       <item name="android:background">@color/blackGolya</item>
    </style>
 
 
@@ -53,36 +59,26 @@
         <item name="android:paddingBottom">@dimen/breach8</item>
     </style>
 
-    <style name="info_item_views">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:paddingBottom">@dimen/breach8</item>
-        <item name="android:orientation">horizontal</item>
-        <item name="android:background">@color/yellowGolya</item>
-    </style>
 
     <style name="info_item_text">
-        <item name="android:layout_width">90dp</item>
-        <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/blackGolya</item>
         <item name="android:textSize">@dimen/caption</item>
+        <item name="android:paddingLeft">@dimen/breach8</item>
+        <item name="android:paddingBottom">@dimen/breach8</item>
     </style>
 
-    <style name="info_item_text.2">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+    <style name="info_item_text.hours">
         <item name="android:textColor">@color/blackGolya</item>
         <item name="android:textSize">@dimen/caption</item>
     </style>
 
     <style name="info_item_buttons">
-        <item name="android:layout_width">24dp</item>
-        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:background">@color/yellowGolya</item>
         <item name="android:scaleType">centerCrop</item>
-        <item name="android:paddingTop">@dimen/breach8</item>
-        <item name="android:paddingBottom">@dimen/breach8</item>
-        <item name="android:paddingRight">@dimen/breach8</item>
+        <item name="android:paddingLeft">@dimen/keyline1</item>
+        <item name="android:layout_marginTop">@dimen/breach8</item>
     </style>
 
     <style name="table">
