@@ -26,7 +26,6 @@
         style="@style/sign_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="clip_vertical"
         android:text="@string/sign"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -39,11 +38,12 @@
         style="@style/menu_button_style"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:paddingRight="@dimen/keyline1"
         android:foregroundGravity="clip_vertical"
         app:layout_constraintLeft_toRightOf="@+id/textViewSign"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/imageViewEmberek"
-        app:layout_constraintTop_toBottomOf="@id/imageViewBanner"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewEmberek"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBanner"
         app:srcCompat="@drawable/golya_nav_ico" />
 
     <ImageView
@@ -57,7 +57,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewSign"
         app:layout_constraintBottom_toTopOf="@+id/textViewMotto"
         app:srcCompat="@drawable/emberek" />
-
     <TextView
         android:id="@+id/textViewMotto"
         style="@style/motto"
@@ -68,204 +67,58 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewEmberek"
-        app:layout_constraintBottom_toTopOf="@+id/infoView"/>
+        app:layout_constraintBottom_toTopOf="@+id/scrollViewInfo"/>
 
-    <android.support.constraint.ConstraintLayout
-            android:id="@+id/infoView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintVertical_weight="2"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewMotto"
-            app:layout_constraintBottom_toTopOf="@+id/imageButtonFacebook">
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollViewInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMotto"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonFacebook"
+        app:layout_constraintVertical_weight="1">
 
-            <ImageButton
-                android:id="@+id/imageButtonLocation"
-                style="@style/info_item_buttons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/location_ico_golya_black" />
+        <include
+            layout="@layout/info_view"/>
+    </android.support.v4.widget.NestedScrollView>
 
-            <TextView
-                android:id="@+id/textViewLocationText"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/address"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButtonLocation"
-                app:layout_constraintLeft_toRightOf="@+id/imageButtonLocation"
-                app:layout_constraintTop_toTopOf="@+id/imageButtonLocation" />
-
-
-            <ImageButton
-                android:id="@+id/imageButtonHours"
-                style="@style/info_item_buttons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintLeft_toLeftOf="@+id/imageButtonLocation"
-                app:layout_constraintTop_toBottomOf="@+id/imageButtonLocation"
-                app:srcCompat="@drawable/hours_ico_golya_black" />
-
-            <TextView
-                android:id="@+id/textViewMonday"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/monday"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButtonHours"
-                app:layout_constraintLeft_toRightOf="@+id/imageButtonHours"
-                app:layout_constraintTop_toTopOf="@+id/imageButtonHours" />
-
-            <TextView
-                android:id="@+id/textViewMondayHours"
-                style="@style/info_item_text.hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/monday_hours_string"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textViewMonday"
-                app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
-            <TextView
-                android:id="@+id/textViewTuesday"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tuesday"
-                app:layout_constraintLeft_toLeftOf="@+id/textViewMonday"
-                app:layout_constraintTop_toBottomOf="@+id/textViewMonday" />
-
-            <TextView
-                android:id="@+id/textViewTuesdayHours"
-                style="@style/info_item_text.hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tuesday_hours_string"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textViewTuesday"
-                app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
-            <TextView
-                android:id="@+id/textViewWednesday"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wednesday"
-                app:layout_constraintLeft_toLeftOf="@+id/textViewTuesday"
-                app:layout_constraintTop_toBottomOf="@+id/textViewTuesday" />
-
-            <TextView
-                android:id="@+id/textViewWednesdayHours"
-                style="@style/info_item_text.hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wednesday_hours_string"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textViewWednesday"
-                app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
-            <TextView
-                android:id="@+id/textViewThursday"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/thursday"
-                app:layout_constraintLeft_toLeftOf="@+id/textViewWednesday"
-                app:layout_constraintTop_toBottomOf="@+id/textViewWednesday"  />
-
-            <TextView
-                android:id="@+id/textViewThursdayHours"
-                style="@style/info_item_text.hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/thursday_hours_string"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textViewThursday"
-                app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
-            <TextView
-                android:id="@+id/textViewFriday"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/friday"
-                app:layout_constraintLeft_toLeftOf="@+id/textViewThursday"
-                app:layout_constraintTop_toBottomOf="@+id/textViewThursday" />
-
-            <TextView
-                android:id="@+id/textViewFridayHours"
-                style="@style/info_item_text.hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/friday_hours_string"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textViewFriday"
-                app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
-            <TextView
-                android:id="@+id/textViewSaturday"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/saturday"
-                app:layout_constraintLeft_toLeftOf="@+id/textViewFriday"
-                app:layout_constraintTop_toBottomOf="@+id/textViewFriday" />
-
-            <TextView
-                android:id="@+id/textViewSaturdayHours"
-                style="@style/info_item_text.hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/saturday_hours_string"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textViewSaturday"
-                app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
-            <TextView
-                android:id="@+id/textViewSunday"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sunday"
-                app:layout_constraintLeft_toLeftOf="@+id/textViewSaturday"
-                app:layout_constraintTop_toBottomOf="@+id/textViewSaturday" />
-
-            <TextView
-                android:id="@+id/textViewSundayHours"
-                style="@style/info_item_text.hours"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sunday_hours_string"
-                app:layout_constraintBaseline_toBaselineOf="@+id/textViewSunday"
-                app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
-            <ImageButton
-                android:id="@+id/imageButtonPhone"
-                style="@style/info_item_buttons"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/tel_ico_golya_black"
-                app:layout_constraintLeft_toLeftOf="@+id/imageButtonHours"
-                app:layout_constraintTop_toBottomOf="@+id/textViewSunday" />
-
-            <TextView
-                android:id="@+id/textViewPhonenumber"
-                style="@style/info_item_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/telnumber_string"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButtonPhone"
-                app:layout_constraintTop_toTopOf="@+id/imageButtonPhone"
-                app:layout_constraintLeft_toLeftOf="@+id/textViewSunday" />
-
-        </android.support.constraint.ConstraintLayout>
 
     <ImageButton
         android:id="@+id/imageButtonFacebook"
         style="@style/menu_button_style.bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/facebook_ico_white"
-        app:layout_constraintRight_toRightOf="parent"
+        android:paddingRight="@dimen/keyline1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/infoView"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonEmail"
+        app:layout_constraintTop_toBottomOf="@+id/scrollViewInfo"
+        app:srcCompat="@drawable/facebook_ico_white" />
+
+    <ImageButton
+        android:id="@+id/imageButtonEmail"
+        style="@style/menu_button_style.bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonFacebook"
+        app:layout_constraintLeft_toRightOf="@+id/imageButtonHttp"
+        app:layout_constraintTop_toBottomOf="@id/scrollViewInfo"
+        app:srcCompat="@drawable/email_ico_golya_white" />
+
+    <ImageButton
+        android:id="@+id/imageButtonHttp"
+        style="@style/menu_button_style.bottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/http_ico_white"
+        app:layout_constraintHorizontal_weight="1"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/imageButtonEmail"
+        app:layout_constraintTop_toBottomOf="@id/scrollViewInfo"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
 
 </android.support.constraint.ConstraintLayout>
