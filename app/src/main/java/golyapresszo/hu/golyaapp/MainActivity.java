@@ -58,5 +58,8 @@ public class MainActivity extends AppCompatActivity {
         textView17.setTypeface(quicksandMedium);
 
     }
+
+
 }
+
 

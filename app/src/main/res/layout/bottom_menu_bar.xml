@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageButtonEmail"
         app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/facebook_ico_white" />
+        app:srcCompat="@drawable/facebook_button" />
 
     <ImageButton
         android:id="@+id/imageButtonEmail"
@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageButtonHttp"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonFacebook"
-        app:srcCompat="@drawable/email_ico_golya_white" />
+        app:srcCompat="@drawable/email_button" />
 
     <ImageButton
         android:id="@+id/imageButtonHttp"
@@ -41,6 +41,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/imageButtonEmail"
-        app:srcCompat="@drawable/http_ico_white" />
+        app:layout_constraintRight_toLeftOf="@+id/imageButtonEmail"
+        app:srcCompat="@drawable/http_button"
+        />
 </android.support.constraint.ConstraintLayout>
