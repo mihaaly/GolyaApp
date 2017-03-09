@@ -1,20 +1,30 @@
 package golyapresszo.hu.golyaapp;
 
+import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    ImageButton imageButtonHttp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ImageButton imageButtonHttp = (ImageButton) (findViewById(R.id.imageButtonHttp));
+
         // Set the font's path
         String fontPathSacramentoRegular="fonts/Sacramento-Regular.ttf";
         String fontPathQuicksandMedium="fonts/Quicksand-Medium.ttf";
         String fontPathQuicksandRegular="fonts/Quicksand-Regular.ttf";
+
         // Get the customFont TextView
         TextView textView1 = (TextView) findViewById(R.id.textViewSign);
         TextView textView2 = (TextView) findViewById(R.id.textViewMotto);
@@ -56,10 +66,34 @@ public class MainActivity extends AppCompatActivity {
         textView15.setTypeface(quicksandMedium);
         textView16.setTypeface(quicksandMedium);
         textView17.setTypeface(quicksandMedium);
+        textView18.setTypeface(quicksandMedium);
 
     }
+    /**
+     * Opens web page in browser
+     */
+    public void goToWeb (View view) {
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://golyapresszo.hu"));
+        startActivity(intent);
+    }
 
+    /**
+     * Opens facebook page
+     */
+    public void goToFacebook (View view) {
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/roncskocsma"));
+        startActivity(intent);
+    }
 
+    /**
+     * Opens E-mail client.
+     */
+    public void writeEmail (View view) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("plain/text");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "golyahaz@gmail.com" });
+        startActivity(Intent.createChooser(intent, ""));
+    }
 }
 
 

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">GolyaApp</string>
     <string name="sign">Gólya Presszó</string>
-    <string name="motto">A Gólya egy presszó és közösségi ház Budapest VIII. kerületében.</string>
-    <string name="address">Bókay János u. 30-34 Budapest, 1083</string>
+    <string name="motto">A Gólya egy presszó és közösségi ház  Budapest VIII. kerületében.</string>
+    <string name="address">Bókay János utca 30-34 Budapest 1083\nhttps://goo.gl/maps/qzGuPwjGPnP2</string>
     <string name="monday">Hétfő</string>
     <string name="monday_hours_string">11:30-23:45</string>
     <string name="tuesday">Kedd</string>

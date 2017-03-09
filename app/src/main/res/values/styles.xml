@@ -68,6 +68,7 @@
         <item name="android:textSize">@dimen/caption</item>
         <item name="android:paddingLeft">@dimen/breach8</item>
         <item name="android:paddingBottom">@dimen/breach8</item>
+        <item name="android:textColorLink">@android:color/holo_red_dark</item>
     </style>
 
     <style name="info_item_text.hours">

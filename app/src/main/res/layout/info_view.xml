@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:showIn="@layout/activity_main">
@@ -30,7 +29,9 @@
             style="@style/info_item_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/breach8"
             android:text="@string/address"
+            android:autoLink="web"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonLocation"
             app:layout_constraintLeft_toRightOf="@+id/imageButtonLocation"
             app:layout_constraintTop_toTopOf="@+id/imageButtonLocation" />
@@ -186,9 +187,10 @@
             style="@style/info_item_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:autoLink="phone"
             android:text="@string/telnumber_string"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonPhone"
-            app:layout_constraintLeft_toLeftOf="@+id/textViewSunday"
-            app:layout_constraintTop_toTopOf="@+id/imageButtonPhone" />
+            app:layout_constraintLeft_toLeftOf="@+id/textViewSunday" />
     </android.support.constraint.ConstraintLayout>
 </android.support.v4.widget.NestedScrollView>
