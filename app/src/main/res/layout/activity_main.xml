@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/banner2" />
 
-    <!-- Gólya presszó text. -->
+    <!-- Business name text. -->
     <TextView
         android:id="@+id/textViewSign"
         style="@style/sign_style"
