@@ -5,7 +5,6 @@
 
     <!-- Margin/padding related dimensions.-->
     <dimen name="zerodp">0dp</dimen>
-    <dimen name="zerodp">0dp</dimen>
     <dimen name="breach4">4dp</dimen>
     <dimen name="breach8">8dp</dimen>
     <dimen name="keyline1">16dp</dimen>
