@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -10,6 +9,7 @@
     android:orientation="vertical"
     tools:context="golyapresszo.hu.golyaapp.MainActivity">
 
+    <!-- Top banner. -->
 
     <ImageView
         android:id="@+id/imageViewBanner"
@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/banner2" />
 
+    <!-- Gólya presszó text. -->
     <TextView
         android:id="@+id/textViewSign"
         style="@style/sign_style"
@@ -35,6 +36,7 @@
         app:layout_constraintRight_toLeftOf="@+id/imageButtonMenu"
         app:layout_constraintTop_toBottomOf="@+id/imageViewBanner" />
 
+    <!-- Navigation icon. -->
     <ImageButton
         android:id="@+id/imageButtonMenu"
         style="@style/menu_button_style"
@@ -48,6 +50,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageViewBanner"
         app:srcCompat="@drawable/nav_button" />
 
+    <!-- Mood picture.-->
     <ImageView
         android:id="@+id/imageViewEmberek"
         android:layout_width="0dp"
@@ -60,6 +63,7 @@
         app:layout_constraintVertical_weight="1"
         app:srcCompat="@drawable/emberek" />
 
+    <!-- Description, motto of the place.-->
     <TextView
         android:id="@+id/textViewMotto"
         style="@style/motto"
@@ -72,19 +76,19 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewEmberek" />
 
-
+    <!-- Middle yellow part with address, opening hours, telephone number. -->
     <include
-        layout="@layout/info_view"
         android:id="@+id/scrollViewInfo"
+        layout="@layout/info_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomMenuBar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewMotto"
-        app:layout_constraintVertical_weight="2"/>
+        app:layout_constraintVertical_weight="2" />
 
-
+    <!-- Bottom menu bar, with intent actions: web page, compose email, go to facebook page.-->
     <include layout="@layout/bottom_menu_bar" />
 
 

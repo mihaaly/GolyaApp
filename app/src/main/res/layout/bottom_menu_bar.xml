@@ -11,39 +11,42 @@
     app:layout_constraintTop_toBottomOf="@id/scrollViewInfo"
     tools:showIn="@layout/activity_main">
 
+    <!-- Clickable Facebook icon.-->
     <ImageButton
         android:id="@+id/imageButtonFacebook"
         style="@style/menu_button_style.bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="goToFacebook"
         android:paddingRight="@dimen/keyline1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageButtonEmail"
         app:layout_constraintRight_toRightOf="parent"
-        app:srcCompat="@drawable/facebook_button"
-        android:onClick="goToFacebook"/>
+        app:srcCompat="@drawable/facebook_button" />
 
+    <!-- Clickable Email/envelope icon.-->
     <ImageButton
         android:id="@+id/imageButtonEmail"
         style="@style/menu_button_style.bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="writeEmail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@+id/imageButtonHttp"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonFacebook"
-        app:srcCompat="@drawable/email_button"
-        android:onClick="writeEmail"/>
+        app:srcCompat="@drawable/email_button" />
 
+    <!-- Clickable Http icon.-->
     <ImageButton
         android:id="@+id/imageButtonHttp"
         style="@style/menu_button_style.bottom"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="goToWeb"
         android:scaleType="fitEnd"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/imageButtonEmail"
-        app:srcCompat="@drawable/http_button"
-        android:onClick="goToWeb"/>
+        app:srcCompat="@drawable/http_button" />
 </android.support.constraint.ConstraintLayout>

@@ -15,6 +15,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Location icon.-->
         <ImageButton
             android:id="@+id/imageButtonLocation"
             style="@style/info_item_buttons"
@@ -24,19 +25,21 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/location_ico_golya_black" />
 
+        <!-- Clickable address.-->
         <TextView
             android:id="@+id/textViewLocationText"
             style="@style/info_item_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/breach8"
+            android:onClick="goToMap"
             android:text="@string/address"
-            android:autoLink="web"
+            android:textColor="@android:color/holo_red_dark"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonLocation"
             app:layout_constraintLeft_toRightOf="@+id/imageButtonLocation"
             app:layout_constraintTop_toTopOf="@+id/imageButtonLocation" />
 
-
+        <!-- Watch icon.-->
         <ImageButton
             android:id="@+id/imageButtonHours"
             style="@style/info_item_buttons"
@@ -46,6 +49,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageButtonLocation"
             app:srcCompat="@drawable/hours_ico_golya_black" />
 
+        <!-- Opening hours, days and times 14 views.-->
         <TextView
             android:id="@+id/textViewMonday"
             style="@style/info_item_text"
@@ -172,7 +176,7 @@
             android:text="@string/sunday_hours_string"
             app:layout_constraintBaseline_toBaselineOf="@+id/textViewSunday"
             app:layout_constraintRight_toRightOf="@+id/textViewLocationText" />
-
+        <!-- Phone icon.-->
         <ImageButton
             android:id="@+id/imageButtonPhone"
             style="@style/info_item_buttons"
@@ -182,6 +186,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textViewSunday"
             app:srcCompat="@drawable/tel_ico_golya_black" />
 
+        <!-- Clickable phone number.-->
         <TextView
             android:id="@+id/textViewPhonenumber"
             style="@style/info_item_text"

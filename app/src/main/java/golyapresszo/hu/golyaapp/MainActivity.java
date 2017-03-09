@@ -6,24 +6,21 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton imageButtonHttp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton imageButtonHttp = (ImageButton) (findViewById(R.id.imageButtonHttp));
 
         // Set the font's path
-        String fontPathSacramentoRegular="fonts/Sacramento-Regular.ttf";
-        String fontPathQuicksandMedium="fonts/Quicksand-Medium.ttf";
-        String fontPathQuicksandRegular="fonts/Quicksand-Regular.ttf";
+        String fontPathSacramentoRegular = "fonts/Sacramento-Regular.ttf";
+        String fontPathQuicksandMedium = "fonts/Quicksand-Medium.ttf";
+        String fontPathQuicksandRegular = "fonts/Quicksand-Regular.ttf";
 
         // Get the customFont TextView
         TextView textView1 = (TextView) findViewById(R.id.textViewSign);
@@ -46,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         TextView textView18 = (TextView) findViewById(R.id.textViewPhonenumber);
 
         // Load the font as a TypeFace object
-        Typeface sacramentoRegular= Typeface.createFromAsset(getAssets(), fontPathSacramentoRegular);
-        Typeface quicksandMedium=Typeface.createFromAsset(getAssets(), fontPathQuicksandMedium);
+        Typeface sacramentoRegular = Typeface.createFromAsset(getAssets(), fontPathSacramentoRegular);
+        Typeface quicksandMedium = Typeface.createFromAsset(getAssets(), fontPathQuicksandMedium);
         // Set the extra fancy font in the customFont TextView
         textView1.setTypeface(sacramentoRegular);
         textView2.setTypeface(quicksandMedium);
@@ -69,18 +66,19 @@ public class MainActivity extends AppCompatActivity {
         textView18.setTypeface(quicksandMedium);
 
     }
+
     /**
-     * Opens web page in browser
+     * Opens web page in browser.
      */
-    public void goToWeb (View view) {
+    public void goToWeb(View view) {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://golyapresszo.hu"));
         startActivity(intent);
     }
 
     /**
-     * Opens facebook page
+     * Opens Facebook page.
      */
-    public void goToFacebook (View view) {
+    public void goToFacebook(View view) {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/roncskocsma"));
         startActivity(intent);
     }
@@ -88,11 +86,19 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Opens E-mail client.
      */
-    public void writeEmail (View view) {
+    public void writeEmail(View view) {
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("plain/text");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[] { "golyahaz@gmail.com" });
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"golyahaz@gmail.com"});
         startActivity(Intent.createChooser(intent, ""));
+    }
+
+    /**
+     * Opens address page in browser/Maps.
+     */
+    public void goToMap(View view) {
+        Intent intent = new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("https://goo.gl/maps/T8fAYpqLiQ82\n"));
+        startActivity(intent);
     }
 }
 

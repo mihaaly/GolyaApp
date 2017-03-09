@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Style for the views with blackGolya colour. -->
     <style name="black_view_style">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">0dp</item>
@@ -18,40 +19,41 @@
         <item name="android:paddingRight">@dimen/keyline1</item>
     </style>
 
+    <!-- Style for the business name. -->
     <style name="sign_style">
         <item name="android:textColor">@color/whiteGolya</item>
         <item name="android:textSize">@dimen/display1</item>
         <item name="android:background">@color/blackGolya</item>
         <item name="android:paddingLeft">@dimen/keyline1</item>
-
-
     </style>
 
+    <!-- Style for the navigation button. -->
     <style name="menu_button_style">
         <item name="android:background">@color/blackGolya</item>
         <item name="android:paddingLeft">@dimen/keyline1</item>
         <item name="android:paddingTop">@dimen/breach4</item>
         <item name="android:baselineAlignBottom">true</item>
-
     </style>
 
+    <!-- Style for the buttons in the bottom menu. -->
     <style name="menu_button_style.bottom">
         <item name="android:paddingLeft">@dimen/breach8</item>
         <item name="android:paddingRight">@dimen/breach8</item>
         <item name="android:paddingBottom">@dimen/keyline1</item>
     </style>
 
-   <style name="motto">
-       <item name="android:textColor">@color/whiteGolya</item>
-       <item name="android:textSize">@dimen/body</item>
-       <item name="android:paddingTop">@dimen/breach4</item>
-       <item name="android:paddingLeft">@dimen/keyline1</item>
-       <item name="android:paddingRight">@dimen/keyline1</item>
-       <item name="android:paddingBottom">@dimen/breach4</item>
-       <item name="android:background">@color/blackGolya</item>
-   </style>
+    <!-- Style for the business description/motto. -->
+    <style name="motto">
+        <item name="android:textColor">@color/whiteGolya</item>
+        <item name="android:textSize">@dimen/body</item>
+        <item name="android:paddingTop">@dimen/breach4</item>
+        <item name="android:paddingLeft">@dimen/keyline1</item>
+        <item name="android:paddingRight">@dimen/keyline1</item>
+        <item name="android:paddingBottom">@dimen/breach4</item>
+        <item name="android:background">@color/blackGolya</item>
+    </style>
 
-
+    <!-- Style for the views with yellowGolya colour. -->
     <style name="yellow_view_style">
         <item name="android:layout_height">@dimen/zerodp</item>
         <item name="android:layout_width">0dp</item>
@@ -62,7 +64,7 @@
         <item name="android:paddingBottom">@dimen/breach8</item>
     </style>
 
-
+    <!-- Style for the information texts (address, phone number...). -->
     <style name="info_item_text">
         <item name="android:textColor">@color/blackGolya</item>
         <item name="android:textSize">@dimen/caption</item>
@@ -71,11 +73,13 @@
         <item name="android:textColorLink">@android:color/holo_red_dark</item>
     </style>
 
+    <!-- Style for the opening hours text -->
     <style name="info_item_text.hours">
         <item name="android:textColor">@color/blackGolya</item>
         <item name="android:textSize">@dimen/caption</item>
     </style>
 
+    <!-- Style for the information icons (location, watch telephone). -->
     <style name="info_item_buttons">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -85,9 +89,4 @@
         <item name="android:layout_marginTop">@dimen/breach8</item>
     </style>
 
-    <style name="table">
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:paddingLeft">@dimen/breach8</item>
-    </style>
 </resources>
