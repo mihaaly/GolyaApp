@@ -12,6 +12,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /**
+         * Source: indications, code samples for setting custom fonts:
+         * https://discussions.udacity.com/t/is-there-a-way-to-add-a-new-font-only-with-xml-without-using-java-code/214891/6
+         */
         // Set the font's path
         String fontPathSacramentoRegular="fonts/Sacramento-Regular.ttf";
         String fontPathQuicksandMedium="fonts/Quicksand-Medium.ttf";
