@@ -1,9 +1,8 @@
 package golyapresszo.hu.golyaapp;
 
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.LinearLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,10 +11,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // Set the font's path
         String fontPathSacramentoRegular="fonts/Sacramento-Regular.ttf";
         String fontPathQuicksandMedium="fonts/Quicksand-Medium.ttf";
-        String fontPathQuicksandRegular="fonts/Quicksand-Regular.ttf";
+
         // Get the customFont TextView
         TextView textView1 = (TextView) findViewById(R.id.sign_view);
         TextView textView2 = (TextView) findViewById(R.id.view_motto);
@@ -36,8 +36,9 @@ public class MainActivity extends AppCompatActivity {
         TextView textView17 = (TextView) findViewById(R.id.sunday_hours_cell);
 
         // Load the font as a TypeFace object
-        Typeface sacramentoRegular= Typeface.createFromAsset(getAssets(), fontPathSacramentoRegular);
-        Typeface quicksandMedium=Typeface.createFromAsset(getAssets(), fontPathQuicksandMedium);
+        Typeface sacramentoRegular = Typeface.createFromAsset(getAssets(), fontPathSacramentoRegular);
+        Typeface quicksandMedium = Typeface.createFromAsset(getAssets(), fontPathQuicksandMedium);
+
         // Set the extra fancy font in the customFont TextView
         textView1.setTypeface(sacramentoRegular);
         textView2.setTypeface(quicksandMedium);
@@ -56,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         textView15.setTypeface(quicksandMedium);
         textView16.setTypeface(quicksandMedium);
         textView17.setTypeface(quicksandMedium);
-
     }
 }
 

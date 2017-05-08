@@ -8,6 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Menu bar (top and bottom) styles. -->
     <style name="black_view_style">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
@@ -18,6 +19,15 @@
         <item name="android:paddingRight">@dimen/keyline1</item>
     </style>
 
+    <!-- Used for the description of the business. -->
+    <style name="black_view_style.motto">
+        <item name="android:textColor">@color/whiteGolya</item>
+        <item name="android:textSize">@dimen/body</item>
+        <item name="android:paddingTop">@dimen/breach8</item>
+        <item name="android:paddingBottom">@dimen/breach8</item>
+    </style>
+
+    <!-- Used for the name of the business. -->
     <style name="sign_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -25,6 +35,7 @@
         <item name="android:textSize">@dimen/display1</item>
     </style>
 
+    <!-- For formatting buttons. -->
     <style name="button_style">
         <item name="android:layout_height">@dimen/touch_zone</item>
         <item name="android:layout_width">@dimen/touch_zone</item>
@@ -32,14 +43,7 @@
         <item name="android:paddingLeft">@dimen/breach8</item>
     </style>
 
-   <style name="black_view_style.motto">
-       <item name="android:textColor">@color/whiteGolya</item>
-       <item name="android:textSize">@dimen/body</item>
-       <item name="android:paddingTop">@dimen/breach8</item>
-       <item name="android:paddingBottom">@dimen/breach8</item>
-   </style>
-
-
+    <!-- Used for the further info section. -->
     <style name="yellow_view_style">
         <item name="android:layout_height">@dimen/zerodp</item>
         <item name="android:layout_width">match_parent</item>
@@ -50,6 +54,7 @@
         <item name="android:paddingBottom">@dimen/breach8</item>
     </style>
 
+    <!-- LinearLayouts containing tables. -->
     <style name="info_item_views">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
@@ -58,6 +63,7 @@
         <item name="android:background">@color/yellowGolya</item>
     </style>
 
+    <!-- TextViews containing information about the business.-->
     <style name="info_item_text">
         <item name="android:layout_width">90dp</item>
         <item name="android:layout_height">wrap_content</item>
@@ -65,6 +71,7 @@
         <item name="android:textSize">@dimen/caption</item>
     </style>
 
+    <!-- TextView containing the address of the business. -->
     <style name="info_item_text.2">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -72,6 +79,7 @@
         <item name="android:textSize">@dimen/caption</item>
     </style>
 
+    <!-- Icons in the further info section.-->
     <style name="info_item_buttons">
         <item name="android:layout_width">24dp</item>
         <item name="android:layout_height">24dp</item>
@@ -82,6 +90,7 @@
         <item name="android:paddingRight">@dimen/breach8</item>
     </style>
 
+    <!-- Used for TableLayouts. -->
     <style name="table">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
